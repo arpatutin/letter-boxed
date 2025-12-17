@@ -22,7 +22,7 @@ def merge_letters_known(base, new):
 
 
 def solve(wordlist, field, min_length = 3, max_length = 10000, word_limit = 500):
-    wordlist = perform_filtering(wordlist, letters=field, min_len=min_length, max_len=max_length)
+    wordlist = perform_filtering(wordlist, letters=field, min_len=min_length, max_len=max_length, sorting=True)
     solutions = []
 
     # This function is introduced inside a function because it uses a list solutions,
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     # DEBUG ONLY
     from wordlists.wordlist_reader import WORDLIST
     # solutions = solve(WORDLIST, ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'])
-    solutions = solve(WORDLIST, list("RAB IDG UKE NCM"), min_length=4, word_limit=5)
+    solutions = solve(WORDLIST, list("RABIDGUKENCM"), min_length=4, word_limit=5)
     print()
     print()
     for s in solutions:

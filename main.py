@@ -66,10 +66,12 @@ if game_mode == "1":
 else:
     print_mode_2_guide()
     with open(DICT_PATH) as fp:
-        wordlist = fp.read()
+        wordlist = fp.read().split('\n')
     field = listify_field(FIELD)
 
     solutions = solve(wordlist, field, min_length=MIN_WORD_LENGTH, max_length=MAX_WORD_LENGTH, word_limit=MAX_CHAIN_LENGTH)
 
+    with open(f"patutin_s{MAX_CHAIN_LENGTH}_w{MIN_WORD_LENGTH}.txt", 'w') as fp:
+        fp.write('\n'.join([" ".join(x) for x in solutions]))
     print_solutions(solutions)
 

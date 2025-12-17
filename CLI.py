@@ -135,7 +135,6 @@ def print_solutions(solutions):
     sleep(1)  # Just waiting; for the sake of convenience
     for s in solutions:
         print(" ".join(s))
-        sleep(0.001)  # as well; so that the output wouldn't be that sudden
     print()
     print("Total solutions found:", len(solutions))
     print("Thank you!")

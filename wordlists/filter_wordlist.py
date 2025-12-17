@@ -17,16 +17,15 @@ def perform_filtering(arr, letters = None,  min_len = 3, max_len = 10000, sortin
     2. If letters is given, checks if the word is only from the letters
     3. If sorting is True, sorts the array.
     """
+    arr = map(lambda s: s.upper(), arr)
     filtered_text = []
     for line in arr:
         if not line:  # If line is empty
             continue
         raw = line.split()[0]
-        if min_len <= len(raw) <= max_len and not (letters and not check(raw, letters)):
-            # not (letters and not check(raw, letters)) checks that either:
-            # 1. letters isn't defined (hence, check wouldn't be called, the statement is true, and it is fine to add the word)
-            # 2. letters is defined, the check is performed and the word consists of those letters
-            filtered_text.append(raw.upper())
+        if min_len <= len(raw) <= max_len:
+            if not letters or check(raw, letters):
+                filtered_text.append(raw)
     if sorting:
         filtered_text.sort()
     return filtered_text

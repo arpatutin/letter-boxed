@@ -2,10 +2,10 @@
 MAX_WORDS = 10
 
 # Mode 2: solving
-MIN_WORD_LENGTH = 4
+MIN_WORD_LENGTH = 3
 MAX_WORD_LENGTH = 1000
-MAX_CHAIN_LENGTH = 5
+MAX_CHAIN_LENGTH = 4
 
-DICT_PATH = "path_to_your_wordlist"
-FIELD = ""
+DICT_PATH = "/Users/arsenii.patutin/Code/c01_letter_boxed/wordlists/files/eng_nouns.txt"
+FIELD = "RAB IDG UKE NCM"
 
