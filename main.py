@@ -65,7 +65,8 @@ if game_mode == "1":
 
 else:
     print_mode_2_guide()
-    wordlist = get_wordlist()
+    with open(DICT_PATH) as fp:
+        wordlist = fp.read()
     field = listify_field(get_field())
 
     solutions = solve(wordlist, field, min_length=MIN_WORD_LENGTH, max_length=MAX_WORD_LENGTH, word_limit=MAX_CHAIN_LENGTH)
