@@ -10,8 +10,8 @@ class IncorrectWordError(Exception):
 
 
 def generate_field():
-    # TODO field generation
-    # But for now:
+    # Fields won't be generated. Playing is suspended on one field only.
+
     # return "ძვე ლთბ წის ურგ".upper()
     # return "იდგ ოხს ნეა ვრლ".upper()  # ივედრა, აგონია, არხი, იოლი, ისევ
     return "BEG LOC SUP MNQ"
