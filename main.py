@@ -72,6 +72,6 @@ else:
     solutions = solve(wordlist, field, min_length=MIN_WORD_LENGTH, max_length=MAX_WORD_LENGTH, word_limit=MAX_CHAIN_LENGTH)
 
     with open(f"patutin_s{MAX_CHAIN_LENGTH}_w{MIN_WORD_LENGTH}.txt", 'w') as fp:
-        fp.write('\n'.join([" ".join(x) for x in solutions]))
+        fp.write('\n'.join([" ".join(x).lower() for x in solutions]))
     print_solutions(solutions)
 

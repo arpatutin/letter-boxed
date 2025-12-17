@@ -48,7 +48,12 @@ def solve(wordlist, field, min_length = 3, max_length = 10000, word_limit = 500)
                     )
 
     for w in wordlist:
-        recursive_solve(wordlist, field, list(w), [w], word_limit=word_limit)
+        try:
+            check_for_a_field(w, field)
+        except IncorrectWordError:
+            pass
+        else:
+            recursive_solve(wordlist, field, list(w), [w], word_limit=word_limit)
 
     return solutions
 

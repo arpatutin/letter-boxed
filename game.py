@@ -81,3 +81,6 @@ def check_word(word, prev, field, guessed, wordlist):
 
     return guessed, word[-1]
 
+
+if __name__ == "__main__":
+    print(check_for_a_field("ABUNDANCE", list("RABIDGUKENCM")))
