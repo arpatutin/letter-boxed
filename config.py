@@ -7,3 +7,5 @@ MAX_WORD_LENGTH = 1000
 MAX_CHAIN_LENGTH = 5
 
 DICT_PATH = "path_to_your_wordlist"
+FIELD = ""
+
