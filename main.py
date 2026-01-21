@@ -67,7 +67,12 @@ else:
     print_mode_2_guide()
     with open(DICT_PATH) as fp:
         wordlist = fp.read().split('\n')
-    field = listify_field(FIELD)
+
+    # Using field from config
+    # field = listify_field(FIELD)
+
+    # Using field from user input (default)
+    field = get_field()
 
     solutions = solve(wordlist, field, min_length=MIN_WORD_LENGTH, max_length=MAX_WORD_LENGTH, word_limit=MAX_CHAIN_LENGTH)
 

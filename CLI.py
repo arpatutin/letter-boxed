@@ -93,7 +93,7 @@ def get_wordlist():
 
 def get_field():
     field = ""
-    wordlist_read = False
+    field_read = False
     print("Please, enter the field now.")
     print()
     print("For entering the field, it is not important which order of the sides you use.")
@@ -108,11 +108,11 @@ def get_field():
     print()
     print("The case of the input doesn't matter -- you can use both upper and lower case letters.")
     print("Please, input the field in the following format now.")
-    while not wordlist_read:
+    while not field_read:
         field = input("XXX XXX XXX XXX: ").upper()
         if len(field) == 15 and field.replace(' ', '').isalpha() and len(field.split(' ')) == 4:
             print("Perfect, thank you!")
-            wordlist_read = True
+            field_read = True
         else:
             print("Sorry, but your input is incorrect.")
             print("Please, try again!")
